@@ -1,6 +1,11 @@
 pipeline {
     // This is important, because of glibc versions, etc. 
     agent { label 'fedora34' } 
+    
+    // For the tools we install (eg, buf)
+    environment {
+      PATH = "/root/go/bin:${env.PATH}"
+    }
 
     stages {
         stage ('Pre-Build') {
