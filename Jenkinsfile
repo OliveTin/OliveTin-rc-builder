@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'fedora34' } # This is important, because of glibc versions, etc. 
 
     stages {
         stage ('Pre-Build') {
