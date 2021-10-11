@@ -20,7 +20,7 @@ pipeline {
                 
                 archiveArtifacts artifacts: 'dist/**', fingerprint: true
                 
-                build job: '../OliveTin-integration-tests'
+                //build job: '../OliveTin-integration-tests'
             }
         }
     }
