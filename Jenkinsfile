@@ -18,7 +18,7 @@ pipeline {
                 sh 'go install "google.golang.org/protobuf/cmd/protoc-gen-go"'
                 sh 'buf generate'
                 sh 'goreleaser release --rm-dist --snapshot'
-                archiveArtifacts artifacts: 'build/**', fingerprint: true
+                archiveArtifacts artifacts: 'dist/**', fingerprint: true
             }
         }
     }
