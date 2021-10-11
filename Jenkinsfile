@@ -3,7 +3,7 @@ pipeline {
     agent { label 'fedora34' } 
     
     options {
-      copyArtifactPermission('OliveTin-integration-tests');
+      copyArtifactPermission('/OliveTin/OliveTin-integration-tests');
     }
     
     // For the tools we install (eg, buf)
