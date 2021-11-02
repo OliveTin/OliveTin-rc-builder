@@ -19,7 +19,6 @@ pipeline {
                 sh 'goreleaser release --rm-dist --snapshot'
                 
                 archiveArtifacts artifacts: 'dist/**', fingerprint: true
-                archiveArtifacts artifacts: 'configs/**', fingerprint: false
                 archiveArtifacts artifacts: 'integration-tests/**', fingerprint: false
                 
                 //build job: '../OliveTin-integration-tests'
